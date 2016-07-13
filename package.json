@@ -1,0 +1,17 @@
+{
+  "name": "checkbox-tree",
+  "version": "0.1.0",
+  "description": "Javascript Checkbox tree plugin for web pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Javascript",
+    "Plugin",
+    "Checkbox",
+    "Tree"
+  ],
+  "author": "Luis Eduardo Davila Campos (luis.davila.campos@gmail.com)",
+  "license": "MIT"
+}
