@@ -56,8 +56,8 @@ CheckBoxTree.prototype = {
 	addCheckboxListeners: function (tree) {
 		var checkboxes = tree.querySelectorAll('input[type="checkbox"]');
 		for (var i = 0; i < checkboxes.length; i++) {
-			checkboxes[i].addEventListener('change', this.selectChilds, false);
-			checkboxes[i].addEventListener('change', this.childSelected.bind(this), false);
+			//checkboxes[i].addEventListener('change', this.selectChilds, false);
+			checkboxes[i].addEventListener('change', this.nodeSelected.bind(this), false);
 			checkboxes[i].addEventListener('change', function() {
 				this.value.selectedsArray = this.getSelectedNodes(this.checkboxTree);
 			}.bind(this));
@@ -72,10 +72,11 @@ CheckBoxTree.prototype = {
 			descendants[i].checked = evt.srcElement.checked;
 		}
 	},
-	childSelected: function (evt) {
+	nodeSelected: function (evt) {
 		var category = evt.srcElement.parentNode.querySelector('label').innerText;
 		var node = this.searchNode(this.value.dataObject, category);
 		node.selected = node.checkbox.checked;
+		this.setChildsSelected(node);
 		if (node && node.checkbox.checked)
 			this.setParentsSelected(node);
 	},
@@ -101,6 +102,15 @@ CheckBoxTree.prototype = {
 		node.selected = true;
 		if (node.parentCategory)
 			this.setParentsSelected(this.searchNode(this.value.dataObject, node.parentCategory));
+	},
+	setChildsSelected: function (node) {
+		if (node.subCategories) {
+			for (var i = 0; i < node.subCategories.length; i++) {
+				node.subCategories[i].checkbox.checked = node.checkbox.checked;
+				node.subCategories[i].selected = node.checkbox.checked;
+				this.setChildsSelected(node.subCategories[i]);
+			}
+		}
 	},
 	getSelectedNodes: function (tree) {
 		var descendants = tree.querySelectorAll('input[type="checkbox"]');
