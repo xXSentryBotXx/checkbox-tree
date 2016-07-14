@@ -56,7 +56,6 @@ CheckBoxTree.prototype = {
 	addCheckboxListeners: function (tree) {
 		var checkboxes = tree.querySelectorAll('input[type="checkbox"]');
 		for (var i = 0; i < checkboxes.length; i++) {
-			//checkboxes[i].addEventListener('change', this.selectChilds, false);
 			checkboxes[i].addEventListener('change', this.nodeSelected.bind(this), false);
 			checkboxes[i].addEventListener('change', function() {
 				this.value.selectedsArray = this.getSelectedNodes(this.checkboxTree);
@@ -64,12 +63,6 @@ CheckBoxTree.prototype = {
 			checkboxes[i].addEventListener('change', function() {
 				this.value.dataObject = this.getSelectedNodesObject(this.checkboxTree);
 			}.bind(this));
-		}
-	},
-	selectChilds: function (evt) {
-		var descendants = evt.srcElement.parentNode.querySelectorAll('input[type="checkbox"]');
-		for (var i = 0; i < descendants.length; i++) {
-			descendants[i].checked = evt.srcElement.checked;
 		}
 	},
 	nodeSelected: function (evt) {
