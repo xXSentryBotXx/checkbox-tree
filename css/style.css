@@ -12,7 +12,7 @@ input:checked + label {
 	font-weight: bold;
 }
 
-input + label:hover {
+input + label:hover, input:hover + label {
 	background: #ccb7ff;
 }
 
@@ -92,6 +92,19 @@ ul {
 }
 
 @media screen and (max-width: 768px) {
+	#tree-plugin {
+		width: 100%;
+		overflow-x: auto;
+		white-space: nowrap;
+		padding-bottom: 5px;
+	}
+	ul {
+		width: 55%;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 1024px) {
 	.header {
 		font-size: 9px;
 	}
@@ -108,14 +121,12 @@ ul {
 	}
 
 	ul {
-		width: 55%;
+		width: 100%;
 		margin: auto;
 	}
 
 	#tree-plugin {
-		width: 100%;
-		overflow-x: auto;
-		white-space: nowrap;
+		width: 40%;
 		padding-bottom: 5px;
 	}
 
@@ -143,5 +154,10 @@ ul {
 		padding: 10px;
 		padding-top: 0;
 		margin: 10px;
+	}
+
+	pre {
+		width: 40%;
+		margin: auto;
 	}
 }
