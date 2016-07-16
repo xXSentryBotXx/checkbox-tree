@@ -63,47 +63,6 @@ ul {
 	margin: auto;
 }
 
-@media screen and (max-width: 320px) {
-	#result-array {
-		font-size: 12px;
-	}
-
-	ul {
-		padding-left: .5em;
-		margin-left: 0;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	#object {
-		max-height: 300px;
-	}
-
-	ul {
-		padding-left: .75em;
-	}
-}
-
-@media screen and (max-width: 640px) {
-	ul {
-		width: 77%;
-		padding-left: 1em;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	#tree-plugin {
-		width: 100%;
-		overflow-x: auto;
-		white-space: nowrap;
-		padding-bottom: 5px;
-	}
-	ul {
-		width: 55%;
-		margin: auto;
-	}
-}
-
 @media screen and (max-width: 1024px) {
 	.header {
 		font-size: 9px;
@@ -121,12 +80,12 @@ ul {
 	}
 
 	ul {
-		width: 100%;
+		width: 55%;
 		margin: auto;
 	}
 
 	#tree-plugin {
-		width: 40%;
+		width: 100%;
 		padding-bottom: 5px;
 	}
 
@@ -159,5 +118,52 @@ ul {
 	pre {
 		width: 40%;
 		margin: auto;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#tree-plugin {
+		width: 100%;
+		overflow-x: auto;
+		white-space: nowrap;
+		padding-bottom: 5px;
+	}
+
+	ul {
+		width: 55%;
+		margin: auto;
+	}
+
+	pre {
+		width: 100%;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	ul {
+		width: 77%;
+		padding-left: 1em;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#object {
+		max-height: 300px;
+	}
+
+	ul {
+		padding-left: .75em;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	#result-array {
+		font-size: 12px;
+	}
+
+	ul {
+		padding-left: .5em;
+		margin-left: 0;
 	}
 }
