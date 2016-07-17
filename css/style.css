@@ -63,6 +63,49 @@ ul {
 	margin: auto;
 }
 
+@media screen and (max-width: 1366px) {
+	ul {
+		width: 100%;
+	}
+
+	.result-header h4 {
+		text-align: center;
+		padding: 0;
+		margin: 10px;
+	}
+
+	.result-header {
+		padding: 1px;
+		margin-top: 15px;
+	}
+
+	#tree-plugin {
+		padding-bottom: 5px;
+	}
+
+	h1 {
+		padding: 10px 0 10px 0;
+	}
+
+	#array {
+		padding: 0px 10px 10px 10px;
+		margin: 10px 10px 10px 10px;
+	}
+
+	#object {
+		max-height: 400px;
+		overflow: auto;
+		padding: 10px;
+		padding-top: 0;
+		margin: 10px;
+	}
+
+	pre {
+		width: 40%;
+		margin: auto;
+	}
+}
+
 @media screen and (max-width: 1024px) {
 	.header {
 		font-size: 9px;
