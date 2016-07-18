@@ -1,19 +1,19 @@
 body {
-	background: #bbbbbb;
+	background: #ddd;
 	font-family: sans-serif;
 	padding: 0;
 	margin: 0;
 	border: 0;
+	color: #444;
 }
 
 input:checked + label {
-	background: #9188ee;
+	background: #777;
 	color: white;
-	font-weight: bold;
 }
 
 input + label:hover, input:hover + label {
-	background: #ccb7ff;
+	background: #999;
 }
 
 label {
@@ -34,7 +34,7 @@ ul {
 .result-header {
 	padding: 1px;
 	margin-top: 15px;
-	background: #96f;
+	background: #777;
 	color: white;
 }
 
@@ -46,8 +46,7 @@ ul {
 
 .header {
 	text-align: center;
-	color: white;
-	background: #96f;
+	background: #eee;
 	height: auto;
 }
 
@@ -59,14 +58,23 @@ ul {
 	height: auto;
 }
 
+.footer {
+	text-align: center;
+	font-size: 1em;
+	background: #777;
+	color: white;
+	padding: 5px 0 5px 0;
+	margin: 5px 0 5px 0;
+}
+
 #array {
-	border: 1px solid #b9f;
+	border: 1px solid #ccc;
 	padding: 0px 10px 10px 10px;
 	margin: 10px 10px 10px 10px;
 }
 
 #object {
-	border: 1px solid #a9f;
+	border: 1px solid #ddd;
 	max-height: 400px;
 	overflow: auto;
 	padding: 10px;
@@ -153,5 +161,9 @@ pre {
 
 	ul {
 		padding-left: .5em;
+	}
+
+	.footer {
+		font-size: .65em;
 	}
 }
