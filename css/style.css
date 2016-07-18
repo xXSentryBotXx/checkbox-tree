@@ -22,12 +22,26 @@ label {
 
 h1 {
 	margin-top: 0;
-	padding: 1px
+	padding: 1px;
+	padding: 10px 0 10px 0;
+}
+
+ul {
+	width: 100%;
+	margin: auto;
 }
 
 .result-header {
+	padding: 1px;
+	margin-top: 15px;
 	background: #96f;
 	color: white;
+}
+
+.result-header h4 {
+	text-align: center;
+	padding: 0;
+	margin: 10px;
 }
 
 .header {
@@ -47,80 +61,40 @@ h1 {
 
 #array {
 	border: 1px solid #b9f;
+	padding: 0px 10px 10px 10px;
+	margin: 10px 10px 10px 10px;
 }
 
 #object {
 	border: 1px solid #a9f;
+	max-height: 400px;
+	overflow: auto;
+	padding: 10px;
+	padding-top: 0;
+	margin: 10px;
 }
 
 #tree-plugin {
 	margin: auto;
 	width: 30%;
+	padding-bottom: 5px;
 }
 
-ul {
-	width: 80%;
+pre {
+	width: 40%;
 	margin: auto;
 }
 
 @media screen and (max-width: 1680px) {
-	ul {
-		width: 100%;
-	}
 
-	.result-header h4 {
-		text-align: center;
-		padding: 0;
-		margin: 10px;
-	}
-
-	.result-header {
-		padding: 1px;
-		margin-top: 15px;
-	}
-
-	#tree-plugin {
-		padding-bottom: 5px;
-	}
-
-	h1 {
-		padding: 10px 0 10px 0;
-	}
-
-	#array {
-		padding: 0px 10px 10px 10px;
-		margin: 10px 10px 10px 10px;
-	}
-
-	#object {
-		max-height: 400px;
-		overflow: auto;
-		padding: 10px;
-		padding-top: 0;
-		margin: 10px;
-	}
-
-	pre {
-		width: 40%;
-		margin: auto;
-	}
 }
 
 @media screen and (max-width: 1366px) {
-	ul {
-		width: 100%;
-	}
 
-	pre {
-		width: 40%;
-		margin: auto;
-	}
 }
 
 @media screen and (max-width: 1280px) {
-	ul {
-		width: 100%;
-	}
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -128,56 +102,13 @@ ul {
 		font-size: 9px;
 	}
 
-	.result-header h4 {
-		text-align: center;
-		padding: 0;
-		margin: 10px;
-	}
-
-	.result-header {
-		padding: 1px;
-		margin-top: 15px;
-	}
-
-	ul {
-		width: 55%;
-		margin: auto;
-	}
-
-	#tree-plugin {
-		width: 100%;
-		padding-bottom: 5px;
-	}
-
 	.content {
 		width: 100%;
 		height: 100%;
 	}
 
-	h1 {
-		padding: 10px 0 10px 0;
-	}
-
-	#array {
-		padding: 0px 10px 10px 10px;
-		margin: 10px 10px 10px 10px;
-	}
-
 	#result-array {
 		font-size: 14px;
-	}
-
-	#object {
-		max-height: 400px;
-		overflow: auto;
-		padding: 10px;
-		padding-top: 0;
-		margin: 10px;
-	}
-
-	pre {
-		width: 40%;
-		margin: auto;
 	}
 }
 
@@ -186,26 +117,19 @@ ul {
 		width: 100%;
 		overflow-x: auto;
 		white-space: nowrap;
-		padding-bottom: 5px;
 	}
 
 	ul {
 		width: 55%;
-		margin: auto;
 	}
 
 	pre {
-		width: 100%;
-		margin: auto;
+		width: 60%;
 	}
 }
 
 @media screen and (max-width: 640px) {
-	ul {
-		width: 55%;
-		padding-left: 1em;
-		margin: auto;
-	}
+
 }
 
 @media screen and (max-width: 480px) {
@@ -215,6 +139,10 @@ ul {
 
 	ul {
 		padding-left: .75em;
+	}
+
+	pre {
+		width: 100%
 	}
 }
 
