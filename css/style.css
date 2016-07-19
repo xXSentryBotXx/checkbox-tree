@@ -82,7 +82,7 @@ ul {
 	margin: 10px;
 }
 
-#tree-plugin {
+.tree-plugin {
 	margin: auto;
 	width: 30%;
 	padding-bottom: 5px;
@@ -121,7 +121,7 @@ pre {
 }
 
 @media screen and (max-width: 768px) {
-	#tree-plugin {
+	.tree-plugin {
 		width: 100%;
 		overflow-x: auto;
 		white-space: nowrap;
