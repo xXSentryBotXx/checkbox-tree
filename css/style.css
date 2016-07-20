@@ -83,9 +83,10 @@ ul {
 }
 
 .tree-plugin {
-	margin: auto;
-	width: 30%;
 	padding-bottom: 5px;
+	display: inline-block;
+	margin: auto;
+	width: 45%;
 }
 
 pre {
