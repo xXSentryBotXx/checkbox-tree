@@ -29,6 +29,7 @@ h1 {
 ul {
 	width: 100%;
 	margin: auto;
+	list-style-type: none;
 }
 
 .result-header {
@@ -85,8 +86,13 @@ ul {
 .tree-plugin {
 	padding-bottom: 5px;
 	display: inline-block;
-	margin: auto;
 	width: 45%;
+	height: 100%;
+	vertical-align: top;
+}
+
+.tree {
+	text-align: center;
 }
 
 pre {
