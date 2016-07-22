@@ -135,6 +135,11 @@ pre {
 		width: 100%;
 		overflow-x: auto;
 		white-space: nowrap;
+		display: block;
+	}
+
+	.trees {
+		width: 100%;
 	}
 
 	ul {
