@@ -14,6 +14,7 @@ input:checked + label {
 
 input + label:hover, input:hover + label {
 	background: #999;
+	color: #ddd;
 }
 
 label {
@@ -33,6 +34,11 @@ ul {
 	list-style-type: none;
 }
 
+.tree-header {
+	width: 40%;
+	margin: auto;
+}
+
 .result-header {
 	padding: 1px;
 	margin-top: 15px;
@@ -47,9 +53,13 @@ ul {
 }
 
 .header {
-	text-align: center;
+	text-align: left;
 	background: #eee;
 	height: auto;
+}
+
+.header h1 {
+	padding-left: 10%;
 }
 
 .content {
