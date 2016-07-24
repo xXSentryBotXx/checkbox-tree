@@ -132,7 +132,12 @@
 	];
 
 	var elem = document.getElementById('second-tree'); //Element to append tree
-	var tree = new CheckBoxTree(data, elem); //Creating a new Checkbox Tree.
+	var tree = new CheckBoxTree(); //Creating a new instance of CheckboxTree.
+
+	tree.setData(data);
+	tree.setElementToRender(elem);
+	tree.render();
+
 	var resultArray = document.getElementById('array');
 	var resultObject = document.getElementById('object');
 	var pArray = document.createElement('p');

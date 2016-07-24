@@ -1,6 +1,6 @@
 
 var CheckBoxTree = function (treeArray, treeElement) {
-	this.treeArray = (JSON.parse(JSON.stringify(treeArray))); //Cloning the data
+	this.treeArray = treeArray ? (JSON.parse(JSON.stringify(treeArray))) : null; //Cloning the data
 	this.value = {
 		selectedsArray: null,
 		dataObject: null
@@ -138,9 +138,23 @@ CheckBoxTree.prototype = {
 		return dataObject;
 	},
 	init: function (treeArray) {
-		this.checkboxTree = this.createCheckboxTree(treeArray);
-		this.treeElement.appendChild(this.checkboxTree);
-		this.nodes = this.getNodes(treeArray);
-		this.addCheckboxListeners(this.checkboxTree);
+		if (this.treeArray && this.treeElement) {
+			this.checkboxTree = this.createCheckboxTree(treeArray);
+			this.treeElement.appendChild(this.checkboxTree);
+			this.nodes = this.getNodes(treeArray);
+			this.addCheckboxListeners(this.checkboxTree);
+		}
+	},
+	setData: function (data) {
+		this.treeArray = (JSON.parse(JSON.stringify(data))); //Cloning the data array.
+		return this;
+	},
+	setElementToRender: function (element) {
+		this.treeElement = element;
+		return this;
+	},
+	render: function () {
+		this.init(this.treeArray);
+		return this;
 	}
 }
