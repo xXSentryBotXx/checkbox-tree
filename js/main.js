@@ -65,11 +65,18 @@
 	pArray.id = 'result-array';
 	var pObject = document.createElement('pre');
 
+	document.getElementById('first-tree').style.display = 'block'; //Displaying first tree whe loading.
+
 	resultArray.appendChild(pArray);
 	resultObject.appendChild(pObject);
 
+	pArray.className += ' tabcontent';
+	pObject.className += ' tabcontent';
+	pArray.className += ' first-tree';
+	pObject.className += ' first-tree';
+
 	function callback () {
-		pArray.innerText = tree.value.selectedsArray; //Geting the array of selected checkboxes
+		pArray.innerText = tree.value.selectedsArray; //Getting the array of selected checkboxes
 		pObject.innerText = JSON.stringify(tree.value.dataObject, null, 2); //Getting the Javascript Object with detailed info.
 	}
 
@@ -147,6 +154,11 @@
 	resultArray.appendChild(pArray);
 	resultObject.appendChild(pObject);
 
+	pArray.className += ' tabcontent';
+	pObject.className += ' tabcontent';
+	pArray.className += ' second-tree';
+	pObject.className += ' second-tree';
+
 	function callback () {
 		pArray.innerText = tree.value.selectedsArray; //Geting the array of selected checkboxes
 		pObject.innerText = JSON.stringify(tree.value.dataObject, null, 2); //Getting the Javascript Object with detailed info.
@@ -159,7 +171,7 @@
 
 function openMethod(evt, method) {
 
-    var i, tabcontent, tablinks;
+    var i, tabcontent, tablinks, elems;
 
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -171,6 +183,12 @@ function openMethod(evt, method) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
-    document.getElementById(method).style.display = "block";
+    elems = document.getElementsByClassName(method);
+
+    console.log(elems);
+
+    for (i = 0; i < elems.length; i++) {
+    	elems[i].style.display = "block";
+    }
     evt.currentTarget.className += " active";
 }
